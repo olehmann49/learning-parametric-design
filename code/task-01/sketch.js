@@ -3,17 +3,22 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(800, 1600, 
+  createCanvas(1600, 1600, 
     );
 }
-
-function draw() {
-  // Großer Kreis Im Hintergrund
+  // -----------------oben links---------------------------
+  // Inspiration: Carmen Herrera
+  function draw() {
   background(20);
 
+// Großer Kreis Im Hintergrund
+  
+  strokeWeight(0)
   fill('red')
   circle(400, 400, 600);
+
   // 2x 90° Winkel in Schwarz
+
   angleMode(DEGREES);
 
   fill('black');
@@ -68,21 +73,95 @@ function draw() {
     0,
     PIE
   );
-  // ------------------------------------------------------------------
+  // ---------------------unten links--------------------------------
+  // Inspiration: Noemi Escandell
+  // Blaues Rechteck als Basis
+  
+  fill('red')
+  rect(
+    100,
+    900, 
+    300,
+    600,
+  );
+  
+  // Einkerbungen im Rechteck
+
+  fill(20)
+  circle(
+    400,
+    1000,
+    200,
+    strokeWeight(0)
+  );
+  
+  fill(20)
+  circle(
+    400,
+    1300,
+    400,
+    strokeWeight(0)
+  );
+
+  // Kreise gleicher größe daneben 
+
+  fill('red')
+  circle(
+    600,
+    1000,
+    200,
+    strokeWeight(0)
+  );
+  
+  fill('red')
+  circle(
+    600,
+    1300,
+    400,
+    strokeWeight(0)
+  );
+
+  // --------------------oben rechts-----------------------------
+
+  // Mittlerer Kreis
+  fill('rgba(0, 0, 0, 1)');
+  stroke(0);
+  strokeWeight(10)
+  circle(
+    1200,
+    400,
+    400,
+  );
+
+fill('rgba(255, 0, 0, 0.4)');
+
+  circle(
+    1300,
+    400,
+    400,
+  );
+
+  fill('rgba(0, 255, 0, 0.4)');
+
+  circle(
+    1100,
+    400,
+    400,
+  );
+
+  fill('rgba(0, 0, 255, 0.4)');
+
+  circle(
+    1200,
+    300,
+    400,
+  );
 
   
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
 
 
