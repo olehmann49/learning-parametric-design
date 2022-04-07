@@ -122,46 +122,102 @@ function setup() {
   );
 
   // --------------------oben rechts-----------------------------
+  // keine Inspiration
+  // Mittlerer Kreis (Basis)
 
-  // Mittlerer Kreis
   fill('rgba(0, 0, 0, 1)');
   stroke(0);
-  strokeWeight(10)
+  strokeWeight(0)
   circle(
     1200,
     400,
     400,
   );
 
-fill('rgba(255, 0, 0, 0.4)');
+  // roter  Kres
 
+  fill('rgba(255, 0, 0, 0.4)');
   circle(
     1300,
     400,
     400,
   );
 
-  fill('rgba(0, 255, 0, 0.4)');
+  // grüner Kreis
 
+  fill('rgba(0, 255, 0, 0.4)');
   circle(
     1100,
     400,
     400,
   );
 
-  fill('rgba(0, 0, 255, 0.4)');
+  // 2x blauer Kreis
 
+  fill('rgba(0, 0, 255, 0.4)');
   circle(
     1200,
     300,
     400,
   );
-
   
+  fill('rgba(0, 0, 255, 0.4)');
+  circle(
+    1200,
+    500,
+    400,
+  );
+  
+  // ----------------------unten rechts-------------------------
+  // keine Inspiration
+  // Kombinatrion verschiedener Formen
+
+  fill('rgba(255, 0, 0, 0)');
+  strokeWeight(10)
+  rect(
+    1000,
+    1000,
+    400,
+    400,
+  )
+  
+  fill('black')
+  rect(
+    1300,
+    1300,
+    200,
+    200,
+  )
+  
+  arc( 
+    1150, 
+    1000,
+    300, 
+    300,
+    0,
+    180,
+    PIE
+  );
+  
+  arc( 
+    1150, 
+    1250,
+    300, 
+    300,
+    90,
+    180,
+    PIE
+  );
+
+  circle(
+    1400,
+    1000,
+    200,
+  );
+
+  circle(
+    1300,
+    1300,
+    200,
+  );
 }
-
-
-
-
-
-
