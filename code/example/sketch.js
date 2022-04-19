@@ -1,9 +1,14 @@
+
+const sketchHeight = 400
+const sketchWidth = 400
+
+
 function preload(){
   // preload assets
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(sketchWidth, sketchHeight);
 }
 
 function draw() {
