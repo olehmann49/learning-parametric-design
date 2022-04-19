@@ -7,7 +7,7 @@ function preload(){
 
 function setup() {
   createCanvas(400, 400);
-  background(0);
+  background(0)
   rectColor = random(0, 255);
   frameRate = 2;
 }
