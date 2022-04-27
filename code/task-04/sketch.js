@@ -3,7 +3,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(400, 400,);
+  createCanvas(400, 400);
   background(255)
 }
 function draw() {
@@ -17,7 +17,6 @@ function draw() {
     circle(400 - (20 * x), 380, 2 * x);     // unter Zeile, kleiner werdene Kreise
     circle(380, 400 - (20 * x), 2 * x);     // linke Spalte, nach unten kleiner werdene Kreise
     x += 1;
-    
   }
 
     x = 0;                                  // Variablen deklarieren
