@@ -1,4 +1,4 @@
-function preload(){
+function preload(){ 
   // preload assets
 }
 
@@ -25,40 +25,36 @@ function draw() {
 
     while (y < 4) {                         // begrenzt die Anzahl der Quadrate der Zeile
                                             
-      if (y % 2) {                     // modulo sorgt dafür, dass die Farbreihenfolge wechselt
-
+      if (y % 2) {                          // modulo sorgt dafür, dass die Farbreihenfolge wechselt
         FW = 1;                             // wenn y gerade: starte mit schwarzem Quadrat
       }else {
-
         FW = 0;                             // vice versa 
       }
 
       while (x < 4) {                       // Begrenzt die Anzahl der Quadrate pro Spalte
 
       if (FW == 0) {                        // Bestimmt die Färbung der Quadrate  in Abhängigkeit von FW
-
         fill ('white');                      
         FW = 1;
       }else {
-
         fill ('black');
         FW = 0;
       }
-      square(40 + (80 * x) , 40 + (80 * y), 80);  // Erzeugung der Quadrate
+      square(40 + (80 * x) , 40 + (80 * y), 80);  // Erzeugung der Quadrat e
+
 
       if (FW == 0) {                        // Bestimmt die Färbung der Kreise in Abhängigkeit von FW 
-
         fill ('white');                     
-        
       }else {
-
         fill ('black');
-        
       }
+
       circle(80 + (80 * x) , 80 + (80 * y), 80);
       x += 1;                               // geht zum nächsten Quadrat / Kreis
     }
+    
     x = 0;                                  // Resettet Spalte        
     y += 1;                                 // geht eine Zeile nach unten
+
   }
 }
