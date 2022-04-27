@@ -22,11 +22,11 @@ function draw() {
 
     x = 0;                                  // Variablen deklarieren
     let y = 0;                              // Variablen deklarieren
-    let FW = 0;                             // Variable "Farbwandler" deklarieren für schachbrettmuster
+    let FW = 0;                             // Variable "Farbwechsler" deklarieren für schachbrettmuster
 
     while (y < 4) {                         // begrenzt die Anzahl der Quadrate der Zeile
                                             
-      if (y % 2 == 0) {                     // modulo sorgt dafür, dass die Farbreihenfolge wechselt
+      if (y % 2) {                     // modulo sorgt dafür, dass die Farbreihenfolge wechselt
 
         FW = 1;                             // wenn y gerade: starte mit schwarzem Quadrat
       }else {
@@ -34,7 +34,7 @@ function draw() {
         FW = 0;                             // vice versa 
       }
 
-      while (x < 4) {                       // Begrenzt die anzahl der Quadrate pro Spalte
+      while (x < 4) {                       // Begrenzt die Anzahl der Quadrate pro Spalte
 
       if (FW == 0) {                        // Bestimmt die Färbung der Quadrate  in Abhängigkeit von FW
 
