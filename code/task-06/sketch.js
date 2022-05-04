@@ -40,7 +40,7 @@ function draw() {
 
   endShape(CLOSE);
 
-  fill(255)                   //Mittelkreis in weiß
+  fill(255);                   //Mittelkreis in weiß
   circle(0, 0, 20);
 
   angle += 6;                 // drehschnelligkeit und -Richtung
