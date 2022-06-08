@@ -1,21 +1,54 @@
 let colorPicker;
 function setup() {
    createCanvas(windowWidth, windowHeight);
-   colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(100, 900);
-   colorPicker.size(200, 100);
+  
+   
+   colorPicker1 = createColorPicker('#FFFFFF');
+   colorPicker1.position(100, 800);
+   colorPicker1.size(150, 100);
+  
+   colorPicker2 = createColorPicker('#FFFFFF');
+   colorPicker2.position(300, 800);
+   colorPicker2.size(150, 100);
+  
+   colorPicker3 = createColorPicker('#FFFFFF');
+   colorPicker3.position(500, 800);
+   colorPicker3.size(150, 100);
+  
+   colorPicker4 = createColorPicker('#FFFFFF');
+   colorPicker4.position(700, 800);
+   colorPicker4.size(150, 100);
+  
+   colorPicker5 = createColorPicker('#FFFFFF');
+   colorPicker5.position(900, 800);
+   colorPicker5.size(150, 100);
+  
+   colorPicker6 = createColorPicker('#FFFFFF');
+   colorPicker6.position(1100, 800);
+   colorPicker6.size(150, 100);
+  
   background(255);
 }
 
 function draw() {
-
+  
+  noStroke();
+  fill(100);
+   rect(50, 170, 1300, 250);
+   rect(50, 730, 1300, 250);
+  
   fill(255);
+  stroke(0);
   translate(0, 100);
   scale(2);
-  strokeWeight(4)
+  strokeWeight(4);
   
-  beginShape();
+  
+  
   translate(100, 200);
+  
+  fill(colorPicker1.color());
+  beginShape();
   
 vertex(475.48,38.09);
 bezierVertex(475.03000000000003,44.92,462.79,46.910000000000004,462.79,46.910000000000004);
@@ -32,7 +65,7 @@ bezierVertex(468.73999999999995,4.710000000000003,475.92999999999995,31.28,475.4
 endShape(CLOSE);
 
   translate(207, -170);
-  
+  fill(colorPicker2.color());
   beginShape();
 vertex(271.12,2.5);
 bezierVertex(213.85,1.9300000000000002,175.32,90.02,163.55,101.8);
@@ -47,7 +80,7 @@ bezierVertex(254.62999999999994,66.16999999999999,263.21999999999997,28.60999999
 endShape(CLOSE);
 
   translate(-57, -26);
-  
+  fill(colorPicker3.color());
   beginShape();
 vertex(335.36,7.56);
 bezierVertex(333.29,13.3,330.85,20.45,328.34000000000003,28.75);
@@ -71,7 +104,7 @@ bezierVertex(337.18,-4.670000000000011,335.36,7.569999999999989,335.36,7.5699999
 endShape(CLOSE);
 
   translate(-150, 177);
-  
+  fill(colorPicker4.color());
   beginShape();
 vertex(199.46,50.23);
 bezierVertex(133.86,51.279999999999994,68.16,50.88999999999999,2.5100000000000193,50.75);
@@ -90,7 +123,7 @@ bezierVertex(183.64000000000001,28.94,192.12000000000003,37.77,199.4700000000000
 endShape(CLOSE);
 
   translate(3, -53);
-  
+  fill(colorPicker5.color());
    beginShape();
 vertex(170.06,74.26);
 bezierVertex(152.31,61.410000000000004,136.25,60.42,136.25,60.42);
@@ -103,7 +136,7 @@ bezierVertex(132.67000000000002,41.599999999999994,157.71,64.88,170.06,74.259999
 endShape(CLOSE);
   
   translate(108, -129);
-  
+  fill(colorPicker6.color());
   beginShape();
 vertex(239.58,2.74);
 bezierVertex(233.61,5.07,234.96,18.86,233.68,28.58);
@@ -117,7 +150,7 @@ bezierVertex(241.04000000000002,106.03000000000002,253.32000000000002,66.8000000
 bezierVertex(268.28,23.85,247.06,-0.18,239.58,2.74);
 endShape(CLOSE);
   
-  fill(255);
+  fill(100);
   circle(25, 140, 10);
   circle(60, 136, 10);
   circle(96, 130, 10);
@@ -126,6 +159,7 @@ endShape(CLOSE);
   circle(200, 104, 10);
   circle(225, 85, 10);
   circle(240, 60, 10);
+  fill(255);
   circle(250, 30, 10);
   
   
