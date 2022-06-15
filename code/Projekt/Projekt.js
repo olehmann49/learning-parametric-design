@@ -1,8 +1,28 @@
 let colorPicker;
+let x = 1;
+let slider;
 function setup() {
    createCanvas(windowWidth, windowHeight);
   
-   
+   slider = createSlider(0, 255, 100);
+  slider.position(200, 1100);
+  
+  button1 = createButton('Dreieck');
+  button1.position(1090, 1160);
+  button1.size(100,50);
+  button1.mousePressed(dreieck);
+  
+  button2 = createButton('Quadrat');
+  button2.position(924, 1160);
+  button2.size(100,50);
+  button2.mousePressed(quadrat); 
+  
+  button3 = createButton('Kreis');
+  button3.position(775, 1160);
+  button3.size(100,50);
+  button3.mousePressed(kreis); 
+  
+  
    colorPicker1 = createColorPicker('#FFFFFF');
    colorPicker1.position(100, 800);
    colorPicker1.size(150, 100);
@@ -43,26 +63,28 @@ function draw() {
   scale(2);
   strokeWeight(4);
   
-  
+    let x = slider.value();
   
   translate(100, 200);
   
   fill(colorPicker1.color());
   beginShape();
   
-vertex(475.48,38.09);
-bezierVertex(475.03000000000003,44.92,462.79,46.910000000000004,462.79,46.910000000000004);
-vertex(4.41,46.910000000000004);
-bezierVertex(1.92,46.910000000000004,2.58,43.06,2.58,43.06);
-vertex(2.68,29.300000000000004);
-bezierVertex(68.34,29.440000000000005,134.04000000000002,29.830000000000005,199.63,28.780000000000005);
-bezierVertex(212.41,28.580000000000005,225.2,28.280000000000005,237.97,27.960000000000004);
-vertex(237.97,27.960000000000004);
-bezierVertex(238.03,27.960000000000004,238.1,27.960000000000004,238.16,27.960000000000004);
-bezierVertex(300.95,26.350000000000005,363.61,23.120000000000005,426.04999999999995,16.770000000000003);
-bezierVertex(432.41999999999996,16.120000000000005,462.59,10.530000000000003,468.73999999999995,4.710000000000003);
-bezierVertex(468.73999999999995,4.710000000000003,475.92999999999995,31.28,475.47999999999996,38.11);
+
+vertex(475,38);
+bezierVertex(475, 44,462,46,462,46);
+vertex(4.41,46);
+bezierVertex(1.92,46,2.58,43.06,2.58,43.06);
+vertex(2.68,29);
+bezierVertex(68.34,29,134,29,199.63,28);
+bezierVertex(212.41,28,225.2,28,237.97,27);
+vertex(237,27);
+bezierVertex(238.03,27,238,27,238.16,27);
+bezierVertex(300.95,26,363.61,23,426,16);
+bezierVertex(432,16,462.59,10,468,4);
+bezierVertex(468,4,475,31,475,38);
 endShape(CLOSE);
+
 
   translate(207, -170);
   fill(colorPicker2.color());
@@ -162,5 +184,29 @@ endShape(CLOSE);
   fill(255);
   circle(250, 30, 10);
   
-  
+  circle(200, 490, 50);
+  square(250, 465, 50);
+  triangle(333, 465, 358, 515, 383, 465);
+ 
 }
+  
+ function dreieck() {
+   
+  
+   
+   
+ }
+
+ function quadrat() {
+   
+   
+   
+   
+ }
+
+ function kreis() {
+   
+   
+   
+   
+ }
