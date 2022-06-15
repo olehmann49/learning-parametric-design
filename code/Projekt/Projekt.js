@@ -1,10 +1,13 @@
 let colorPicker;
+let kreisboolean = false;
+let quadratboolean = false;
+let dreieckboolean = false;
 let x = 1;
 let slider;
 function setup() {
    createCanvas(windowWidth, windowHeight);
   
-   slider = createSlider(0, 255, 100);
+  slider = createSlider(0, 255, 100);
   slider.position(200, 1100);
   
   button1 = createButton('Dreieck');
@@ -22,6 +25,18 @@ function setup() {
   button3.size(100,50);
   button3.mousePressed(kreis); 
   
+
+
+ 
+ function quadrat() {
+       quadratboolean = true
+     }
+ function dreieck(){
+   dreieckboolean = true
+ }
+  function kreis() {
+       kreisboolean = true
+     }
   
    colorPicker1 = createColorPicker('#FFFFFF');
    colorPicker1.position(100, 800);
@@ -47,8 +62,16 @@ function setup() {
    colorPicker6.position(1100, 800);
    colorPicker6.size(150, 100);
   
+   colorPicker7 = createColorPicker('#FFFFFF');
+   colorPicker7.position(550, 1050);
+   colorPicker7.size(150, 150);
+  
+  
   background(255);
 }
+
+
+
 
 function draw() {
   
@@ -188,25 +211,22 @@ endShape(CLOSE);
   square(250, 465, 50);
   triangle(333, 465, 358, 515, 383, 465);
  
+  
+  if (kreisboolean == true) {
+    fill(colorPicker7.color());
+    circle(300, 170, 50);
+  }
+
+  if (quadratboolean == true) {
+    fill(colorPicker7.color());
+    square(275, 145, 50);
+  }
+  
+  if (dreieckboolean == true) {
+    fill(colorPicker7.color());
+    triangle(275, 145, 325, 145, 300, 195);
+  }
+  
+  
 }
-  
- function dreieck() {
-   
-  
-   
-   
- }
-
- function quadrat() {
-   
-   
-   
-   
- }
-
- function kreis() {
-   
-   
-   
-   
- }
+ 
